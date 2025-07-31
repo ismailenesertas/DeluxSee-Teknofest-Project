@@ -1,87 +1,124 @@
-# DeluxSee-Teknofest-Project
-🕶️ DeluxSee: Wearable Smart Assistant for the Visually Impaired
-DeluxSee is a wearable smart assistant designed to help visually impaired individuals navigate their daily lives more safely and independently. Developed as part of the TEKNOFEST 2025 Barrier-Free Living Technologies Competition, the project integrates sensor-based obstacle detection and real-time text recognition using a camera system.
 
-🎯 Project Goal
-DeluxSee aims to support visually impaired users by:
+# 🦯 DeluxSee
 
-Detecting nearby obstacles
+**Smart Wearable Assistant for the Visually Impaired**  
+TEKNOFEST 2025 • Accessibility & Innovation Project
 
-Providing real-time voice guidance
+---
 
-Reading printed or digital text aloud via OCR
+## 📌 About the Project
 
-Alerting users in emergency situations
+**DeluxSee** is a smart wearable device developed to support visually impaired individuals in their daily lives. Equipped with sensors and AI-powered software, the system detects obstacles, recognizes printed text, and provides real-time voice feedback to the user. It stands out with its **portable, low-cost, and user-friendly** design.
 
-All of these features are embedded into a smart glasses design powered by Raspberry Pi.
+> “Developed with empathy, empowered by innovation.”
 
-🧠 Key Features
-📷 Camera-Based Real-Time OCR: Reads printed or digital text aloud using EasyOCR or TrOCR.
+---
 
-🦺 Ultrasonic Obstacle Detection: Warns the user through audio or vibration feedback.
+## 🚀 Key Features
 
-🔊 Voice Feedback System: Describes the environment using audio output.
+- 🔊 **Obstacle Detection**: Real-time alerts using ultrasonic and infrared sensors  
+- 📷 **Camera-Based OCR**: Detects printed Turkish text  
+- 🧠 **AI-Based Reading**: EasyOCR or TrOCR integration  
+- 🗣️ **Voice Feedback**: Real-time text-to-speech (TTS) output  
+- ⚠️ **Emergency Button (Optional)**: Triggers a help request  
+- 🧩 **Modular Hardware**: Wearable like glasses, lightweight and practical
 
-⚡ Portable Design: Runs on a lightweight Raspberry Pi system powered by a rechargeable battery.
+---
 
-🔧 Technologies Used
-Raspberry Pi 4
+## 👥 Team Members
 
-Python, OpenCV, EasyOCR / TrOCR
+**DeluxSee Teknofest Team**
 
-Ultrasonic sensors (HC-SR04)
+| Name                | Role                    |
+|---------------------|--------------------------|
+| Ahmet Burak İşleyen | Team Leader - Developer  |
+| İsmail Enes Ertaş   | Software Developer       |
+| Havvagül Şener      | Hardware Specialist      |
+| Hejar Aslan         | System Integration       |
+| Dilara Boz          | Testing                  |
+| Gülfidan Çakmak     | System Integration       |
 
-USB Camera
+---
 
-Speakers / Audio Module
+## 🔧 Installation
 
-Portable Power Supply (Powerbank / Li-ion Battery)
+### 1. Install Dependencies
 
-👥 Team Members
-DeluxSee Teknofest Team
+**For EasyOCR users:**
 
-Ahmet Burak İşleyen (Team Leader)
-İsmail Enes Ertaş
-Havvagül Şener
-Hejar Aslan
-Dilara Boz
-
-Gülfidan Çakmak
-
-⚙️ Installation
-Requirements
-Raspberry Pi 4 (Raspbian OS recommended)
-
-Python 3.8+
-
-USB Camera or Pi Camera
-
-HC-SR04 Ultrasonic Sensor
-
-Speaker or headphones
-
-Powerbank or portable battery
-
-Install Dependencies
-
+```bash
 sudo apt update && sudo apt upgrade
 sudo apt install python3-pip
 pip install opencv-python easyocr numpy playsound
-If using TrOCR instead of EasyOCR:
+```
 
+**To use TrOCR instead of EasyOCR:**
+
+```bash
 pip install torch torchvision torchaudio
 pip install transformers
-Run the Project
-bash
+```
+
+---
+
+## ▶️ Run the Project
+
+```bash
 python3 main.py
-🧪 How to Use
-Mount the smart glasses on your head.
+```
 
-Once powered, the system starts processing the camera input.
+---
 
-Nearby obstacles will trigger voice alerts.
+## 🧪 How to Use
 
-Detected text will be read aloud using OCR.
+1. Mount the smart glasses on your head  
+2. Once powered, the system activates the camera  
+3. Obstacles are detected and voice alerts are given  
+4. Detected text is read aloud via OCR and TTS  
+5. (Optional) Emergency button can trigger help requests
 
-Optional emergency alert button or voice command features can be included.
+---
 
+## 📁 Project Structure
+
+```
+DeluxSee/
+├── main.py               # Main application script
+├── ocr/                  # OCR modules (EasyOCR / TrOCR)
+├── tts/                  # Text-to-Speech module
+├── sensors/              # Obstacle detection sensor code
+├── hardware/             # Circuit diagrams and documentation
+├── assets/               # Audio files, sample images
+└── README.md             # Project documentation
+```
+
+---
+
+## ⚙️ Technologies Used
+
+- Python 3
+- OpenCV
+- EasyOCR / TrOCR
+- PyTorch, Transformers
+- gTTS, pyttsx3 (Text-to-Speech)
+- Raspberry Pi / ESP32
+- Ultrasonic and IR sensors
+- Camera module
+- Mini speaker or earphones
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions to this project!  
+You can:  
+- Report bugs  
+- Suggest new features  
+- Submit pull requests  
+
+We also welcome collaborations with NGOs or initiatives working on accessibility and assistive technologies.
+
+---
+
+
+> © 2025 • DeluxSee Team – All rights reserved.
